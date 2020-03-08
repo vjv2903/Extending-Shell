@@ -16,43 +16,55 @@ then the shell must display the appropriate message to the user.
 
 **_E.g:_**
 Example 1
+
 <Name@Ubuntu:~> ls & This command when finished, should
 print its result to stdout.
+
 Example 2
+
 <Name@Ubuntu:~> echo hello
+
 <Name@Ubuntu:~> emacs &
+
 <Name@Ubuntu:~> ls -l (display the output)
+
 <Name@Ubuntu:~> emacs with pid 456 exited normally
+
 <Name@Ubuntu:~>
+
 **_Specification 2: Implement input-output redirection functionality_**
 Output of running one (or more) commands must be redirected to a file. Similarly, a
 command might be prompted to read input data from a file and asked to write output
 to another file. ​ **Appropriate error handling must be done** ​(like if the input file does
 not exist – display error message, if output file does not exist - create one with
 **permissions of 644** ​, etc.)
-**_Output Redirection - Ex:_** ​<NAME@UBUNTU:~> diff
-file1.txt file2.txt > output.txt
+**_Output Redirection - Ex:_** ​
+
+<NAME@UBUNTU:~> diff file1.txt file2.txt > output.txt
 **_Input Redirection - Ex:_**
+
 <NAME@UBUNTU:~> sort < lines.txt
-**_Input-Output Redirection - Ex:_** ​<NAME@UBUNTU:~>
-sort < lines.txt > sortedlines.txt
+**_Input-Output Redirection - Ex:_** ​
+
+<NAME@UBUNTU:~> sort < lines.txt > sortedlines.txt
+
 **Note** ​: There is another clause for output direction '>>', and that must be
-
-
 implemented appropriately.
+
 **_Specification 3: Implement command redirection using pipes_**
 A pipe is identified by "​ **|** ​". One or more commands can be piped as the following
 examples show. Your program must be able to support any number of pipes.
 **_Two Commands - Ex:_**
 <NAME@UBUNTU:~> more file.txt | wc
-**_Three Commands - Ex:_** ​<NAME@UBUNTU:~> grep "new"
-temp.txt | cat somefile.txt | wc
+**_Three Commands - Ex:_** ​
+<NAME@UBUNTU:~> grep "new" temp.txt | cat somefile.txt | wc
+
 **_Specification 4: Implement i/o redirection + pipes redirection
 Eg:_**
 <NAME@UBUNTU:~> ls | grep *.txt > out.txt
+
 <NAME@UBUNTU:~> cat < in.txt | wc -l > lines.txt
-**_Hint_** ​ _: treat input output redirection as an argument to the command and handle it
-appropriately_
+
 **_Specification 5: User-defined commands_**
 The following commands must be supported by your shell:
 
@@ -121,14 +133,17 @@ and implement it – your shell should only exit when ​ **quit** ​is typed.
 ​Example:
 
 
-<Name@UBUNTU:~> ls
+<Name@UBUNTU:~> ls 
 shell.c
 <Name@UBUNTU:~> echo “Hello”
 Hello
 <Name@UBUNTU:~> ^[[A
+
 <Name@UBUNTU:~> echo “Hello”
 Hello
+
 <Name@UBUNTU:~> ^[[A^[[A^[[A
+
 <Name@UBUNTU:~> ls
 shell.c
 Explanation:
