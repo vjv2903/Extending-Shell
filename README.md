@@ -55,12 +55,16 @@ implemented appropriately.
 A pipe is identified by "​ **|** ​". One or more commands can be piped as the following
 examples show. Your program must be able to support any number of pipes.
 **_Two Commands - Ex:_**
+
 <NAME@UBUNTU:~> more file.txt | wc
+
 **_Three Commands - Ex:_** ​
+
 <NAME@UBUNTU:~> grep "new" temp.txt | cat somefile.txt | wc
 
 **_Specification 4: Implement i/o redirection + pipes redirection
 Eg:_**
+
 <NAME@UBUNTU:~> ls | grep *.txt > out.txt
 
 <NAME@UBUNTU:~> cat < in.txt | wc -l > lines.txt
@@ -82,6 +86,7 @@ an unsetenv command to have zero command-line arguments.
 - ​ **jobs** ​: prints a list of all currently running jobs along with their pid, in particular,
     background jobs, in order of their creation along with their state – Running or
     Stopped.
+
 <NAME@UBUNTU:~> jobs
     [1] Running emacs assign1.txt [221]
     [2] Running firefox [430]
@@ -135,8 +140,10 @@ and implement it – your shell should only exit when ​ **quit** ​is typed.
 
 <Name@UBUNTU:~> ls 
 shell.c
+
 <Name@UBUNTU:~> echo “Hello”
 Hello
+
 <Name@UBUNTU:~> ^[[A
 
 <Name@UBUNTU:~> echo “Hello”
@@ -146,6 +153,7 @@ Hello
 
 <Name@UBUNTU:~> ls
 shell.c
+
 Explanation:
 1) ‘ls’ is executed.
 2) ‘echo’ is executed.
