@@ -1,5 +1,5 @@
-# Extending-Shell
-Added some advanced commands to shell which use some advance system calls in C
+
+# Extending the OS Shell
 
 **_Specification 1: Foreground and background processes_**
 Apart from the user defined commands, all other commands are treated as system
