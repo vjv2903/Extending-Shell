@@ -1,6 +1,4 @@
 
-# OS ASSIGNMENT 3
-
 ## Aim
 
 Implement a shell which supports semi-colon separated list of commands.
